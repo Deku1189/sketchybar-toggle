@@ -16,7 +16,6 @@ public final class SketchyBarController: BarController {
 
     public func hide() {
         // Instant hide — macOS menu bar is already sliding in // No, I want slow slide out
-        run(arguments: ["--bar", "hidden=off", "y_offset=0"])
         runAsync(arguments: ["--animate", "sin", "12", "--bar", "y_offset=-50"])
     }
 
